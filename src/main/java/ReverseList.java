@@ -30,6 +30,7 @@ public class ReverseList {
     public ListNode reverse2(ListNode cur, ListNode pre) {
         if (cur == null) return pre;
         ListNode result = reverse2(cur.next, cur);
+        //回溯时修改各节点的 next
         cur.next = pre;
         return result;
     }
